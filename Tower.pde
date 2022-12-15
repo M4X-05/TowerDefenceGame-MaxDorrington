@@ -52,7 +52,7 @@ class Tower {
       image(tower, x, y);
     } else if (towerMode == PLACING && money >= 5) {
       image(tower, mouseX, mouseY);
-      if (mousePressed) {
+      if (mousePressed && mouseX > 0 && mouseX < 700) {
         towerMode = PLACED;
         money = money - 5;
         x = mouseX;
@@ -81,7 +81,7 @@ class Tower {
       image(AOETower, x, y);
     } else if (towerMode == PLACING && money >= 25) {
       image(AOETower, mouseX, mouseY);
-      if (mousePressed) {
+      if (mousePressed && mouseX > 0 && mouseX < 700) {
         towerMode = PLACED;
         money = money - 25;
         x = mouseX;
